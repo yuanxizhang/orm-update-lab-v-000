@@ -66,6 +66,6 @@ class Student
       SET name = ?, grade = ?
       WHERE id = ?;
       SQL
-    row = DB[:conn].execute(sql, self.id)
+    row = DB[:conn].execute(sql, self.name, slf.gradeself.id)
   end
 end
