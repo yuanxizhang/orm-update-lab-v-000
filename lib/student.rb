@@ -63,7 +63,7 @@ class Student
   def update 
     sql = <<-SQL
       UPDATE students
-      SET name = self.name, grade = self.grade
+      SET name = ?, grade = self.grade
       WHERE id = ?;
       SQL
     row = DB[:conn].execute(sql, self.id)
